@@ -1,7 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 android/
-export/
+#export/
 
 # Unity specific ignores
 /[Ll]ibrary/
