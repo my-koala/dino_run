@@ -1,0 +1,201 @@
+[gd_scene load_steps=21 format=3 uid="uid://dbofkwg7ibbhs"]
+
+[ext_resource type="PackedScene" uid="uid://cidwhcrwl7xto" path="res://tools/map/map_2d.tscn" id="1_54qeo"]
+[ext_resource type="Script" path="res://assets/packs/longasstimeago/maps/dinoland/scripts/dinoland.gd" id="2_byxqy"]
+[ext_resource type="PackedScene" uid="uid://dfgrngk7qipm3" path="res://tools/treadmill/treadmill_area_2d.tscn" id="3_v3sg7"]
+[ext_resource type="Script" path="res://assets/packs/longasstimeago/maps/dinoland/scripts/biome_desert.gd" id="4_qelr4"]
+[ext_resource type="Texture2D" uid="uid://cm1sbp57f6a1t" path="res://assets/packs/longasstimeago/maps/dinoland/textures/desert_sand.png" id="5_4pacs"]
+[ext_resource type="Texture2D" uid="uid://dynpncah5nhaa" path="res://assets/packs/longasstimeago/actors/trex/textures/pixel.png" id="5_x8ma5"]
+[ext_resource type="Script" path="res://assets/packs/longasstimeago/maps/dinoland/scripts/biome_jungle.gd" id="6_fug3y"]
+[ext_resource type="Texture2D" uid="uid://dj32ucb6ler74" path="res://assets/packs/longasstimeago/maps/dinoland/textures/desert_clouds.png" id="7_skwet"]
+[ext_resource type="Texture2D" uid="uid://gybwbkqfobpi" path="res://assets/packs/longasstimeago/maps/dinoland/textures/desert_dunes.png" id="7_uflb5"]
+[ext_resource type="PackedScene" uid="uid://diy7ekgawcwmh" path="res://tools/game/game_map.tscn" id="9_4ijgq"]
+[ext_resource type="Texture2D" uid="uid://bhmucreg7m0bx" path="res://assets/packs/longasstimeago/maps/dinoland/textures/desert_transition.png" id="9_je0qg"]
+[ext_resource type="Texture2D" uid="uid://djn4pgq2rx64q" path="res://assets/packs/longasstimeago/maps/dinoland/textures/jungle_grass.png" id="9_loygu"]
+[ext_resource type="PackedScene" uid="uid://poshhmhq1ed8" path="res://tools/kill/kill_area_2d.tscn" id="9_ohxro"]
+[ext_resource type="Texture2D" uid="uid://ckf3edymx6d0n" path="res://assets/packs/longasstimeago/maps/dinoland/textures/jungle_clouds.png" id="10_gtibg"]
+[ext_resource type="Texture2D" uid="uid://ctgwkrjbevsry" path="res://assets/packs/longasstimeago/maps/dinoland/textures/jungle_trees.png" id="12_ywmg8"]
+[ext_resource type="Texture2D" uid="uid://cxs7rwhin5fiq" path="res://assets/packs/longasstimeago/maps/dinoland/textures/jungle_transition.png" id="14_weexl"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xn71c"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8eucc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7emaw"]
+font_size = 6
+font_color = Color(0, 1, 0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dv7g4"]
+normal = Vector2(1, 0)
+distance = 113.41
+
+[node name="dinoland" instance=ExtResource("1_54qeo")]
+script = ExtResource("2_byxqy")
+
+[node name="static_body_2d" type="StaticBody2D" parent="." index="0"]
+position = Vector2(0, 90)
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="static_body_2d" index="0"]
+shape = SubResource("WorldBoundaryShape2D_xn71c")
+
+[node name="treadmill_area_2d" parent="." index="1" instance=ExtResource("3_v3sg7")]
+position = Vector2(0, 96)
+collision_layer = 16
+collision_mask = 0
+monitoring = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="treadmill_area_2d" index="0"]
+position = Vector2(0, -6)
+shape = SubResource("WorldBoundaryShape2D_8eucc")
+
+[node name="biomes" type="Node2D" parent="." index="2"]
+
+[node name="desert" type="Node2D" parent="biomes" index="0"]
+script = ExtResource("4_qelr4")
+
+[node name="display" type="Sprite2D" parent="biomes/desert" index="0"]
+clip_children = 1
+texture = ExtResource("5_x8ma5")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 128, 96)
+
+[node name="clouds" type="Parallax2D" parent="biomes/desert/display" index="0"]
+scroll_scale = Vector2(0.125, 0.125)
+repeat_size = Vector2(512, 0)
+repeat_times = 3
+follow_viewport = false
+ignore_camera_scroll = true
+
+[node name="sprite_2d" type="Sprite2D" parent="biomes/desert/display/clouds" index="0"]
+texture_repeat = 2
+position = Vector2(0, 32)
+texture = ExtResource("7_skwet")
+centered = false
+offset = Vector2(0, -32)
+region_rect = Rect2(0, 0, 1024, 64)
+
+[node name="dunes" type="Parallax2D" parent="biomes/desert/display" index="1"]
+scroll_scale = Vector2(0.25, 0.25)
+repeat_size = Vector2(256, 0)
+repeat_times = 3
+follow_viewport = false
+ignore_camera_scroll = true
+
+[node name="sprite_2d" type="Sprite2D" parent="biomes/desert/display/dunes" index="0"]
+texture_repeat = 2
+position = Vector2(0, 91)
+texture = ExtResource("7_uflb5")
+centered = false
+offset = Vector2(0, -32)
+region_rect = Rect2(0, 0, 1024, 64)
+
+[node name="sand" type="Parallax2D" parent="biomes/desert/display" index="2"]
+repeat_size = Vector2(256, 0)
+repeat_times = 3
+follow_viewport = false
+ignore_camera_scroll = true
+
+[node name="sprite_2d" type="Sprite2D" parent="biomes/desert/display/sand" index="0"]
+texture_repeat = 2
+position = Vector2(0, 96)
+texture = ExtResource("5_4pacs")
+centered = false
+offset = Vector2(0, -32)
+region_rect = Rect2(0, 0, 1024, 64)
+
+[node name="transition" type="Sprite2D" parent="biomes/desert/display" index="3"]
+z_index = 1
+position = Vector2(-64, 80)
+texture = ExtResource("9_je0qg")
+offset = Vector2(0, -40)
+
+[node name="spawner" type="Node2D" parent="biomes/desert" index="1"]
+
+[node name="jungle" type="Node2D" parent="biomes" index="1"]
+script = ExtResource("6_fug3y")
+
+[node name="display" type="Sprite2D" parent="biomes/jungle" index="0"]
+clip_children = 1
+texture = ExtResource("5_x8ma5")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 128, 96)
+
+[node name="clouds" type="Parallax2D" parent="biomes/jungle/display" index="0"]
+scroll_scale = Vector2(0.125, 0.125)
+repeat_size = Vector2(512, 0)
+repeat_times = 3
+follow_viewport = false
+ignore_camera_scroll = true
+
+[node name="sprite_2d" type="Sprite2D" parent="biomes/jungle/display/clouds" index="0"]
+texture_repeat = 2
+position = Vector2(0, 40)
+texture = ExtResource("10_gtibg")
+centered = false
+offset = Vector2(0, -32)
+region_rect = Rect2(0, 0, 1024, 64)
+
+[node name="trees" type="Parallax2D" parent="biomes/jungle/display" index="1"]
+scroll_scale = Vector2(0.25, 0.25)
+repeat_size = Vector2(256, 0)
+repeat_times = 3
+follow_viewport = false
+ignore_camera_scroll = true
+
+[node name="sprite_2d" type="Sprite2D" parent="biomes/jungle/display/trees" index="0"]
+texture_repeat = 2
+position = Vector2(-2, 60)
+texture = ExtResource("12_ywmg8")
+centered = false
+offset = Vector2(0, -32)
+region_rect = Rect2(0, 0, 1024, 64)
+
+[node name="grass" type="Parallax2D" parent="biomes/jungle/display" index="2"]
+repeat_size = Vector2(256, 0)
+repeat_times = 3
+follow_viewport = false
+ignore_camera_scroll = true
+
+[node name="sprite_2d" type="Sprite2D" parent="biomes/jungle/display/grass" index="0"]
+texture_repeat = 2
+position = Vector2(0, 96)
+texture = ExtResource("9_loygu")
+centered = false
+offset = Vector2(0, -32)
+region_rect = Rect2(0, 0, 1024, 64)
+
+[node name="transition" type="Sprite2D" parent="biomes/jungle/display" index="3"]
+z_index = 1
+position = Vector2(-64, 80)
+texture = ExtResource("14_weexl")
+offset = Vector2(0, -40)
+
+[node name="spawner" type="Node2D" parent="biomes/jungle" index="1"]
+
+[node name="debug" type="CanvasLayer" parent="." index="3"]
+visible = false
+
+[node name="label" type="Label" parent="debug" index="0"]
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 227.0
+offset_bottom = 26.0
+text = "69
+"
+label_settings = SubResource("LabelSettings_7emaw")
+
+[node name="camera_2d" type="Camera2D" parent="." index="4"]
+anchor_mode = 0
+
+[node name="kill_area_2d" parent="." index="5" instance=ExtResource("9_ohxro")]
+position = Vector2(-256, 0)
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="kill_area_2d" index="0"]
+shape = SubResource("WorldBoundaryShape2D_dv7g4")
+
+[node name="game_map" parent="." index="6" instance=ExtResource("9_4ijgq")]
+
+[node name="node_2d" type="Node2D" parent="." index="7"]
+position = Vector2(26, 20)

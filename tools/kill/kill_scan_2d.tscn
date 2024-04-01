@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://hrtph5x4ls2m"]
+
+[ext_resource type="Script" path="res://tools/kill/scripts/kill_scan_2d.gd" id="1_3hi6g"]
+
+[node name="kill_scan_2d" type="Node2D"]
+script = ExtResource("1_3hi6g")
+collision_mask = 64

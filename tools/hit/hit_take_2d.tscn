@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://wfxjtpx2daw7"]
+
+[ext_resource type="Script" path="res://tools/hit/scripts/hit_take_2d.gd" id="1_cbmtd"]
+
+[node name="hit_take_2d" type="Area2D"]
+collision_layer = 0
+collision_mask = 32
+input_pickable = false
+monitorable = false
+script = ExtResource("1_cbmtd")
+max_health = 1

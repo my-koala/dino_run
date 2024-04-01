@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://poshhmhq1ed8"]
+
+[ext_resource type="Script" path="res://tools/kill/scripts/kill_area_2d.gd" id="1_mk40h"]
+
+[node name="kill_area_2d" type="Area2D"]
+collision_layer = 64
+collision_mask = 0
+input_pickable = false
+monitoring = false
+script = ExtResource("1_mk40h")

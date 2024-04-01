@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfd1bpi5df8ee"]
+
+[ext_resource type="Script" path="res://main/scripts/main.gd" id="1_56uju"]
+[ext_resource type="PackedScene" uid="uid://v3m4t75oa3em" path="res://tools/game/game.tscn" id="2_bbtnl"]
+
+[node name="main" type="Node"]
+script = ExtResource("1_56uju")
+
+[node name="game" parent="." node_paths=PackedStringArray("protagonist", "map") instance=ExtResource("2_bbtnl")]
+protagonist = NodePath("trex")
+map = NodePath("dinoland")

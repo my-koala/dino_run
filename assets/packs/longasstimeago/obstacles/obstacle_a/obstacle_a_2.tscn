@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://df1mowsydwm2h"]
+
+[ext_resource type="PackedScene" uid="uid://dgacoxy286vwn" path="res://assets/packs/longasstimeago/obstacles/obstacle_a/obstacle_a.tscn" id="1_qqbnb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aosr0"]
+size = Vector2(12, 28)
+
+[node name="obstacle_a_2" instance=ExtResource("1_qqbnb")]
+
+[node name="sprite_2d" parent="physics_interpolation_2d" index="0"]
+frame = 2
+
+[node name="collision_shape_2d" parent="hit_give_2d" index="0"]
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_aosr0")

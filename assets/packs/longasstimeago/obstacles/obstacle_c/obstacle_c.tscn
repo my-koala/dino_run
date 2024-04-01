@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=3 uid="uid://csgunk1ks1gh8"]
+
+[ext_resource type="Script" path="res://assets/packs/longasstimeago/obstacles/obstacle_c/scripts/obstacle_c.gd" id="1_c50us"]
+[ext_resource type="Script" path="res://modules/physics_interpolation/scripts/physics_interpolation_2d.gd" id="2_cyor0"]
+[ext_resource type="Texture2D" uid="uid://yvqnwqw5tbug" path="res://assets/packs/longasstimeago/obstacles/obstacle_c/textures/obstacle_c_diffuse.png" id="3_qopr1"]
+[ext_resource type="PackedScene" uid="uid://b3bh30uhgsec1" path="res://tools/hit/hit_give_2d.tscn" id="4_dk1lg"]
+[ext_resource type="PackedScene" uid="uid://hrtph5x4ls2m" path="res://tools/kill/kill_scan_2d.tscn" id="5_xg63o"]
+[ext_resource type="AnimationLibrary" uid="uid://5lpkf0y5mj04" path="res://assets/packs/longasstimeago/obstacles/obstacle_c/animations/obstacle_c_default.tres" id="6_sqnq7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvt51"]
+size = Vector2(60, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lskqa"]
+size = Vector2(42, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ky7g5"]
+size = Vector2(29, 9)
+
+[sub_resource type="Animation" id="Animation_qybr4"]
+resource_name = "RESET"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("physics_interpolation_2d/sprite_2d:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ngtj3"]
+_data = {
+"RESET": SubResource("Animation_qybr4")
+}
+
+[node name="obstacle_c" type="StaticBody2D"]
+script = ExtResource("1_c50us")
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="."]
+visible = false
+
+[node name="physics_interpolation_2d" type="Node2D" parent="."]
+script = ExtResource("2_cyor0")
+
+[node name="sprite_2d" type="Sprite2D" parent="physics_interpolation_2d"]
+texture = ExtResource("3_qopr1")
+offset = Vector2(0, -11)
+hframes = 2
+
+[node name="hit_give_2d" parent="." instance=ExtResource("4_dk1lg")]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="hit_give_2d"]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_lvt51")
+
+[node name="collision_shape_2d-2" type="CollisionShape2D" parent="hit_give_2d"]
+position = Vector2(2, -10.5)
+shape = SubResource("RectangleShape2D_lskqa")
+
+[node name="collision_shape_2d-3" type="CollisionShape2D" parent="hit_give_2d"]
+position = Vector2(4.5, -16.5)
+shape = SubResource("RectangleShape2D_ky7g5")
+
+[node name="kill_scan_2d" parent="." instance=ExtResource("5_xg63o")]
+
+[node name="animation_player" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ngtj3"),
+"obstacle_c_default": ExtResource("6_sqnq7")
+}

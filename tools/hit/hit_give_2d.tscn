@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3bh30uhgsec1"]
+
+[ext_resource type="Script" path="res://tools/hit/scripts/hit_give_2d.gd" id="1_hfu07"]
+
+[node name="hit_give_2d" type="Area2D"]
+collision_layer = 32
+collision_mask = 0
+input_pickable = false
+monitoring = false
+script = ExtResource("1_hfu07")

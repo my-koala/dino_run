@@ -1,0 +1,443 @@
+[gd_scene load_steps=45 format=3 uid="uid://v3m4t75oa3em"]
+
+[ext_resource type="Script" path="res://tools/game/scripts/game.gd" id="1_ud3sb"]
+[ext_resource type="PackedScene" uid="uid://dbofkwg7ibbhs" path="res://assets/packs/longasstimeago/maps/dinoland/dinoland.tscn" id="2_kuy3r"]
+[ext_resource type="PackedScene" uid="uid://dxeo28dt7rcfy" path="res://assets/packs/longasstimeago/actors/trex/trex.tscn" id="3_d4nuv"]
+[ext_resource type="Texture2D" uid="uid://bygr5utmiodfv" path="res://tools/game/textures/pixel.png" id="3_ew50l"]
+[ext_resource type="Texture2D" uid="uid://cmx16o6pxkp7q" path="res://tools/game/textures/text.png" id="4_0rplf"]
+[ext_resource type="Theme" uid="uid://dbv0mas5iflct" path="res://tools/game/text.tres" id="5_cj4xl"]
+[ext_resource type="Script" path="res://tools/game/scripts/digit_display.gd" id="5_h1oxl"]
+[ext_resource type="PackedScene" uid="uid://i5h3umfgh0sy" path="res://tools/game/digit.tscn" id="5_twyy8"]
+[ext_resource type="Script" path="res://modules/input_relay/scripts/input_relay.gd" id="8_ynlf8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ou0w"]
+atlas = ExtResource("4_0rplf")
+region = Rect2(0, 23, 51, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcm0j"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(0, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yl6i"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igcax"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dq2m5"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4r80"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hsh1"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_675cg"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jc0ns"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxca2"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4726"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suqeq"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj4gk"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm6ro"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxe5u"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81h8r"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hs6a"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t823c"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hadlb"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyeeh"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyn7c"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwurx"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeyet"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1wdl"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c4bn"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7sbk"]
+atlas = ExtResource("4_0rplf")
+region = Rect2(53, 23, 33, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ama7w"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(0, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2vlw"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcos2"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qa8em"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikc88"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhfjg"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0kgk"]
+resource_local_to_scene = true
+atlas = ExtResource("4_0rplf")
+region = Rect2(70, 0, 7, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxobm"]
+atlas = ExtResource("4_0rplf")
+region = Rect2(0, 12, 55, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq7oo"]
+atlas = ExtResource("4_0rplf")
+region = Rect2(99, 0, 26, 20)
+
+[node name="game" type="Node" node_paths=PackedStringArray("protagonist", "map")]
+script = ExtResource("1_ud3sb")
+protagonist = NodePath("trex")
+map = NodePath("dinoland")
+
+[node name="dinoland" parent="." instance=ExtResource("2_kuy3r")]
+
+[node name="start_cover" type="Sprite2D" parent="."]
+texture = ExtResource("3_ew50l")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 96)
+
+[node name="trex" parent="." instance=ExtResource("3_d4nuv")]
+z_index = 2
+position = Vector2(16, 91)
+flop_speed = 80.0
+
+[node name="gui" type="CanvasLayer" parent="."]
+
+[node name="control" type="Control" parent="gui"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="distance" type="TextureRect" parent="gui/control"]
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 56.0
+offset_bottom = 9.0
+texture = SubResource("AtlasTexture_3ou0w")
+stretch_mode = 2
+script = ExtResource("5_h1oxl")
+
+[node name="h_box_container" type="HBoxContainer" parent="gui/control/distance"]
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 51.0
+offset_right = 251.0
+offset_bottom = 9.0
+theme = ExtResource("5_cj4xl")
+
+[node name="digit-0" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_vcm0j")
+
+[node name="digit-1" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_6yl6i")
+digit = 10
+
+[node name="digit-2" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_igcax")
+digit = 10
+
+[node name="digit-3" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_dq2m5")
+digit = 10
+
+[node name="digit-4" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_s4r80")
+digit = 10
+
+[node name="digit-5" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_2hsh1")
+digit = 10
+
+[node name="digit-6" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_675cg")
+digit = 10
+
+[node name="digit-7" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_jc0ns")
+digit = 10
+
+[node name="digit-8" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_sxca2")
+digit = 10
+
+[node name="digit-9" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_o4726")
+digit = 10
+
+[node name="digit-10" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_suqeq")
+digit = 10
+
+[node name="digit-11" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_rj4gk")
+digit = 10
+
+[node name="digit-12" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_gm6ro")
+digit = 10
+
+[node name="digit-13" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_bxe5u")
+digit = 10
+
+[node name="digit-14" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_81h8r")
+digit = 10
+
+[node name="digit-15" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_6hs6a")
+digit = 10
+
+[node name="digit-16" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_t823c")
+digit = 10
+
+[node name="digit-17" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_hadlb")
+digit = 10
+
+[node name="digit-18" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_lyeeh")
+digit = 10
+
+[node name="digit-19" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_gyn7c")
+digit = 10
+
+[node name="digit-20" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_dwurx")
+digit = 10
+
+[node name="digit-21" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_oeyet")
+digit = 10
+
+[node name="digit-22" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_o1wdl")
+digit = 10
+
+[node name="digit-23" parent="gui/control/distance/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_3c4bn")
+digit = 10
+
+[node name="speed" type="TextureRect" parent="gui/control"]
+auto_translate_mode = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 11.0
+offset_right = 56.0
+offset_bottom = 18.0
+texture = SubResource("AtlasTexture_h7sbk")
+stretch_mode = 2
+script = ExtResource("5_h1oxl")
+
+[node name="h_box_container" type="HBoxContainer" parent="gui/control/speed"]
+layout_mode = 0
+offset_left = 33.0
+offset_right = 233.0
+offset_bottom = 9.0
+theme = ExtResource("5_cj4xl")
+
+[node name="digit-0" parent="gui/control/speed/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_ama7w")
+
+[node name="digit-1" parent="gui/control/speed/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_r2vlw")
+digit = 10
+
+[node name="digit-2" parent="gui/control/speed/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_xcos2")
+digit = 10
+
+[node name="digit-3" parent="gui/control/speed/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_qa8em")
+digit = 10
+
+[node name="digit-4" parent="gui/control/speed/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_ikc88")
+digit = 10
+
+[node name="digit-5" parent="gui/control/speed/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_xhfjg")
+digit = 10
+
+[node name="digit-6" parent="gui/control/speed/h_box_container" instance=ExtResource("5_twyy8")]
+layout_mode = 2
+texture = SubResource("AtlasTexture_f0kgk")
+digit = 10
+
+[node name="game_over" type="TextureRect" parent="gui/control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = 11.0
+offset_right = 27.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_lxobm")
+stretch_mode = 2
+
+[node name="retry" type="TextureRect" parent="gui/control"]
+auto_translate_mode = 1
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -10.0
+offset_right = 13.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_iq7oo")
+stretch_mode = 2
+
+[node name="start_cover" type="ColorRect" parent="gui/control"]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 20.0
+
+[node name="input_relay" type="Node" parent="."]
+script = ExtResource("8_ynlf8")

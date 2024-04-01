@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://i5h3umfgh0sy"]
+
+[ext_resource type="Texture2D" uid="uid://cmx16o6pxkp7q" path="res://tools/game/textures/text.png" id="1_p53r7"]
+[ext_resource type="Script" path="res://tools/game/scripts/digit.gd" id="2_cjrsd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hrtq"]
+resource_local_to_scene = true
+atlas = ExtResource("1_p53r7")
+region = Rect2(0, 0, 7, 9)
+
+[node name="digit" type="TextureRect"]
+auto_translate_mode = 1
+texture = SubResource("AtlasTexture_3hrtq")
+script = ExtResource("2_cjrsd")
